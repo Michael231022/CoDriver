@@ -18,6 +18,9 @@
     padding: 20px 10%;
     background-color: white; /*rgba(255, 255, 255, 0.438)*/
     z-index: 999;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 .header-bar li, .header-bar a {
@@ -157,6 +160,10 @@
     -moz-animation: fadeIn 0.7s;
     -o-animation: fadeIn 0.7s;
     -ms-animation: fadeIn 0.7s;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 @keyframes fadeIn {
