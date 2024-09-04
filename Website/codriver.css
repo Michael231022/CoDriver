@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+/******* Header-Bar *******/
+
+.header-bar {
+    width:100%;
+    height: 90px;
+    color: black;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: white; /*rgba(255, 255, 255, 0.438)*/
+    z-index: 999;
+}
+
+.header-bar li, .header-bar a {
+    font-family: "Montserrat", sans-serif;
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    transition: all 0.3s ease 0s;
+}
+
+.header-bar li:hover, .heaer-bar a:hover {
+    color: rgb(37, 37, 231);
+    background-color: rgba(221, 220, 220, 0.26);
+}
+
+.header-bar li {
+    display: inline-block;
+    padding: 0px 20px;
+    padding-top: 6px;
+    height: 35px;
+    border: 0;
+    border-radius: 100px;
+}
+
+#calldriver button {
+    width: 160px;
+    height: 40px;
+    color: white;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    word-spacing: 2px;
+    border: 0;
+    border-radius: 100px;
+    background-color: rgb(37, 37, 231);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#calldriver button:hover {
+    color: rgb(37, 37, 231);
+    background-color: white;
+    border: 1px solid rgb(37, 37, 231);
+}
+
+#login_acc {
+    margin-left: 10px;
+}
+
+#login_acc:hover {
+    color: rgb(37, 37, 231);
+}
+
+.toggle-button {
+    position: absolute;
+    top: 36px;
+    right: 50px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width:30px;
+    height: 21px;
+}
+
+.toggle-button .toggle-bar {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius:10px;
+}
+
+/* - DROPDOWN NAVIGATION - */
+.nav_links-more-dropdown-div {
+    display: inline-block;
+    width: fit-content;
+}
+
+.nav_links-more-dropdown {
+    display: none;
+    position: absolute;
+    margin-top: 10px;
+    min-width: 210px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 999;
+}
+
+.nav_links-more-dropdown a {
+    float: none;
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    display: block;
+    font-size: 17px;
+    text-align: left;
+    text-decoration: none;
+    animation: fadeIn 0.5s;
+    -webkit-animation: fadeIn 0.5s;
+    -moz-animation: fadeIn 0.5s;
+    -o-animation: fadeIn 0.5s;
+    -ms-animation: fadeIn 0.5s;
+}
+
+.nav_links-more-dropdown a:hover {
+    background-color: rgba(218, 218, 218, 0.349);
+    color: rgb(37, 37, 231);
+}
+
+.nav-bar-arrow-down {
+    margin-bottom: 4px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+
+
+/******* DROPDOWN-MENU *******/
+
+.dropdown-menu {
+    display: none;
+    width: 100%;
+    height: max-content;
+    opacity: 0;
+    background-color: white;
+    position: fixed;
+    top: 90px;
+    z-index: 999;
+    animation: fadeIn 0.7s;
+    -webkit-animation: fadeIn 0.7s;
+    -moz-animation: fadeIn 0.7s;
+    -o-animation: fadeIn 0.7s;
+    -ms-animation: fadeIn 0.7s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.dropdown-menu-links {
+    height: fit-content;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+@media (max-height: 500px) {
+    .dropdown-menu {
+        height: 55%;
+    }
+
+    .dropdown-menu-links {
+        height: 100%;
+    }
+}
+
+
+.dropdown-menu-links li {
+    color: black;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.dropdown-menu-links li:hover {
+    background-color: rgba(233, 233, 233, 0.288);
+    color: rgba(0, 0, 0, 0.753);
+}
+
+@media (max-width: 1293px) {
+    .toggle-button {
+        display: flex;
+    }
+    .nav-bar {
+        display: none;
+    }
+}
+
+
+/******* Main-Content *******/
+
+.main_content {
+    width: 100%;
+    height: 5000px;
+}
+
+
+/******* CONTAINER-IMG *******/
+
+
+.header-container {
+    position: relative;
+    top: 90px;
+    width: 100%;
+    height: 660px;
+    overflow: hidden;
+}
+
+.header-img-container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    animation: slide 25s infinite;
+}   
+
+.header-img-container img {
+    width: 100%;
+    min-height: 660px;
+    object-fit: fill;
+}
+
+/*@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(0);
+    }
+    35% {
+        transform: translateX(-100%);
+    }
+    60% {
+        transform: translateX(-100%);
+    }
+    70% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}*/
+
+
+@media (max-width:772px) {
+    .header-img-container {
+        height: 100%;
+    }
+    .header-container {
+        max-height: 462px;
+    }
+    .header-img-container img {
+        min-height: 462px;
+    }
+}
+
+
+/******* Download App Bar *******/
+
+#app-download-bar-a {
+    text-decoration: none;
+}
+
+.app-download-bar-div {
+    position: relative;
+    margin-top: 90px;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    background: linear-gradient(to right, white 50%, rgba(41, 41, 209, 0.911) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .3s ease-out;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.app-download-bar-div:hover {
+    background-position: left bottom ;
+    border-bottom: 1px solid rgba(41, 41, 209, 0.911);
+    color: rgba(41, 41, 209, 0.911);
+}
+
+.app-download-bar-p {
+    position:relative;
+    top: 35%;
+    left: 10%;
+    height: fit-content;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******* MAIN-FOOTER *******/
+.main-footer {
+    width: 100%;
+    height: 400px;
+    background-color: #eaeff2;
+    padding: 40px;
+}
+
+.footer-top {
+    width: 100%;
+    height: max-content;
+    background-color: pink;
+}
+
+.footer-top-div-1 {
+    width: 20%;
+    height: 100px;
+    background-color: green;
+    display: inline-block;
+    align-items: center;
+    border: 1px solid black;
+    margin-right: 100px;
+}
+
+.footer-top-div-1 li {
+    list-style: none;
+}
