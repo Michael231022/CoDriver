@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign-up</title>
+        <link rel="icon" type="image/x-icon" href="../image/favicon_io/favicon-16x16.png" sizes="16x16">
+        <link rel="stylesheet" type="text/css" href="../codriver_css/codriver_signup.css">
+    </head>
+
+    <body>
+        <div class="main-content">
+            <header class="header-bar">
+                <a id="header-logo-a" href="../codriver.html"><nav class="header-logo-nav">
+                    <img class="header-logo" draggable="false" src="../image/logo/codriver-logo-dark.png">
+                </nav></a>
+            </header>
+
+            <div class="content-below-header">
+                <form class="signup-form-div" id="form" action="../user_data/user_data.php">
+                    <div class="signup-form-h1">
+                        <h1>Sign-up</h1>
+                        <img class="signup-avatar" src="../image/social_app_icon/avartar.png" alt="avartar">
+                    </div>
+
+                    <div class="signup-form-information">
+                        <div class="information-email-phone">
+                            <p>Name (same as NRIC):</p>
+                            <input id="Username" type="text" name="username" autocomplete="off" spellcheck="false" autocorrect="false" autofocus placeholder="Enter your name" required>
+                            <br />
+                            <br />
+                            <p>Email or Phone Number:</p>
+                            <input id="Phone_Number_or_Email" type="email" inputmode="email" autocomplete="email" name="email" spellcheck="false" autocorrect="false" placeholder="Enter phone number or email" required>
+                            <br />
+                            <br />
+                            <p>Gender:</p>
+                            <select id="Gender_Male" type="checkbox" name="gender" autocomplete="off" required>
+                                <option value="" class="option-first">-- Select your gender --</option>
+                                <option value="gender_male">Male</option>
+                                <option value="gender_female">Female</option>
+                            </select>
+                            <br />
+                            <br />
+                            <p>Password:</p>
+                            <input id="Password" type="password" name="password" autocomplete="off" spellcheck="false" autocorrect="false" placeholder="Enter your password" required>
+                            <br />
+                            <br />
+                            <p>Confirm Password:</p>
+                            <input id="Confirm_Password" type="password" name="confirm_password" autocomplete="off" spellcheck="false" autocorrect="false" placeholder="Re-enter your password" required>
+                            <br />
+                            <br />
+                            <p>Date of Birth:</p>
+                            <input id="Date_Of_Birth" type="date" name="date_of_birth" autocomplete="off" spellcheck="false" autocorrect="false" required>
+                            <br />
+                            <br />
+                            <button id="information-continue" onclick="click_continue()">Continue</button>
+                        </div>
+                    </div>
+
+                    <!--OR LINE-->
+                    <div class="or-line-div">
+                        <p class="div-or">or</p>
+                    </div>
+
+
+                    <!--CONTINUE WITH-->
+                    <div class="continuewith-div">
+                        <button id="CONTINUE_WITH_GOOGLE"><img src="../image/social_app_icon/google_icon.png">Continue with Google</button>
+
+                        <button id="CONTINUE_WITH_APPLE"><img src="../image/social_app_icon/apple_icon.png">Continue with Apple</button>
+                    </div>
+
+
+                    
+                    <!--ALREADY AN ACC-->
+                    <div class="already-acc">
+                        <p>Already have an account? <a id="signuppage_login" href="codriver_login.html">Log in</a></p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </body>
+
+    <script text="text/javascript" src="../codriver_javascript/user_info_store.js"></script>
+    <script text="text/javascript" src="../codriver_javascript/codriver_signup.js"></script>
+
+</html>
